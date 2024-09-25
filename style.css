@@ -1432,7 +1432,7 @@ transition: all 0.3s ease;
         }
         
         .footer-section .footer-content{
-            padding: 80px 45px;
+            padding: 80px 69px;
         }
         
         .footer-section .footer-title h3{
@@ -1497,7 +1497,6 @@ transition: all 0.3s ease;
         }
 
 
-        
         .footer-section .first-box{
             right: 10%;
             position: relative;
@@ -1533,8 +1532,7 @@ transition: all 0.3s ease;
             background: var(--c-secondary-one);
         }
 
-        
-        
+                
         .first-box .footer-address li i {
             font-size: 26px;
             color: #fff;
@@ -2894,7 +2892,6 @@ input, select {
 }
 
 
-
 .form-btn-area {
     border-radius: 5px;
     border: 1px solid #eee;
@@ -3037,8 +3034,6 @@ border-radius: 5px;
     height: 70px;
     border: 1px solid #c4c4c475;
 }
-
-
 
  .form-contact input:hover{
      border: 1px solid var(--c-secondary-one);

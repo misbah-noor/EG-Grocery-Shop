@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog detail Page</title>
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+    <!--boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="responsive.css">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="blog-detail">
+    
+ <!--Navbar Section Start-->
+ <div class=" header-1">
+    <nav class="navbar navbar-light bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://public-assets.envato-static.com/assets/logos/envato_market-dd390ae860330996644c1c109912d2bf63885fc075b87215ace9b5b4bdc71cc8.svg" alt="" width="160" height="34">
+          </a>
+          <button type="button" class="button btn ">Buy Now</button>
+        </div>
+      </nav>
+    </div>
+
+  <!--2nd navbar-->
+  <div class="pagesheader fixed-top">
+    <nav class="navbar navbar-expand-lg w-100  shadow px-lg-5 ps-md-1 py-3 ">
+      <div class="container-fluid mx-lg-5 mx-md-1">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo-2.png" alt="logo" 
+        >
+        </a>
+       
+        <form class="d-flex d-lg-block d-none justify-content-center ms-auto w-50">
+
+        <div class="input-group justify-content-center">
+            <input type="text" class=" form-control fs-5 ps-4 text-secondary shadow-none" style="border-radius: 10px 0 0 10px;" placeholder="Search Product">
+               <button class="n-btn"
+               type="submit" style="border-radius: 0 10px 10px 0;">
+               Search
+               </button>
+               </div>
+          </form> 
+
+          <ul class="navbar-nav ms-lg-auto d-md-flex flex-row ">
+
+                <li class="nav-item pagesnav d-lg-none d-block ">
+                    <a class="nav-link "
+                    data-bs-toggle="modal" data-bs-target="#navsearch"  
+                    href=""><img src="images/search.png" alt="search" ></a>
+                </li>
+                  <li class="nav-item pagesnav">
+                    <a class="nav-link me-1" href="myaccount.html"><img src="images/user.png" alt="user"></a>
+                  </li>
+              <!-- menu button -->
+                    <div class="align-self-center">
+                      <div class="toggle mt-2">
+                        <a class="btn shadow-none" data-bs-toggle="offcanvas" href="#menu-canvas" role="button" aria-controls="offcanvasExample">
+                          <i class='bx bx-menu fs-3 '></i>
+                        </a> 
+                      </div>
+                    </div>
+
+                  <li class="nav-item pagesnav ">
+                    <a class="nav-link me-4 position-relative"  data-bs-toggle="offcanvas" href="#rightsidebar" role="button" aria-controls="offcanvasExample"><img src="images/shopping-cart.png" alt="cart" >
+                      <span class="position-absolute top-3 start-100 translate-middle p-1 badge rounded-circle bg-dark fw-light">
+                        12</span> </a>
+                  </li>         
+              </ul>
+              <div class="header-right  d-lg-block d-none mb-3">
+                 <div class="nav-phone d-flex  ">
+                <i class='bx bx-phone-call fs-1 d-flex justify-content-  center mt-4'></i>
+                  <div class="text-lg-end d-flex flex-column mt-2">
+                      <span class="text-secondary me-5">Hot Line Number</span>
+                      <span class=" info me-3 ">+880 176 1111 456</span>
+                  </div>
+              </div>
+              </div>
+
+        
+      </div>
+    </nav>
+    </div>
+    
+
+<!-- Menu Canvas-->
+    
+<div class="offcanvas menu-canvas offcanvas-start" tabindex="-1" id="menu-canvas" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+<button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="back"><i class='bx bx-arrow-back text-reset'></i></button>
+</div>
+<div class="offcanvas-body">
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed fs-5 shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Home
+      </button>
+    </h3>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul class="page-ul">
+          <li class="page-list"><a class="text-dark text-decoration-none" href="index.html">Home1</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="#">Home2</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed fs-5 shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Shop
+      </button>
+    </h3>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul class="page-ul">
+          <li class="page-list"><a class="text-dark text-decoration-none" href="product.html">Product</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="productdetail.html">Product Details</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="productsidebar.html">Product Sidebar</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>   
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="flush-headingthree">
+      <button class="accordion-button collapsed fs-5 shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsethree" aria-expanded="false" aria-controls="flush-collapsethree">
+        Pages
+      </button>
+    </h3>
+    <div id="flush-collapsethree" class="accordion-collapse collapse" aria-labelledby="flush-headingthree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul class="page-ul">
+          <li class="page-list"><a class="text-dark text-decoration-none" href="about.html">About</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="cart.html">Cart</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="checkout.html">Checkout</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="myaccount.html">My Account</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="login.html">Login Register</a></li>    <li class="page-list"><a class="text-dark fw- text-decoration-none" href="FAQ.html">FAQ</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="Error.html">Error</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h3 class="accordion-header" id="flush-headingfour">
+      <button class="accordion-button collapsed fs-5 shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+        Blog
+      </button>
+    </h3>
+    <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul class="page-ul">
+          <li class="page-list"><a class="text-dark text-decoration-none" href="blog grid.html">Blog Grid</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="blogstandard.html">Blog Standard</a></li>
+          <li class="page-list"><a class="text-dark fw- text-decoration-none" href="blogdetail.html">Blog Details</a></li>
+        </ul>
+      </div>
+    </div>   
+  </div>   
+</div>
+<ul class="page-ul">
+<li class="page-list style-none"><a href="contact.html" class="text-decoration-none text-dark fs-5 conta">Contact</a></li>
+</ul>
+
+<div class="intouch">
+<div class="mainheading">
+  <h3>Get in touch</h3>
+</div>
+<div class="para">
+  <p class="text-secondary">541 Melville Ave, Palo Alto, CA 94301 <br> connect.us@gmail.com</p>
+</div>
+<div class="linkss">
+  <ul class="d-flex">
+    <li><a href="#" class="text-decoration-none text-dark"><i class='bx bxl-facebook'></i></a></li>
+    <li><a href="#" class="text-decoration-none text-dark"><i class='bx bxl-whatsapp'></i></a></li>
+    <li><a href="#" class="text-decoration-none text-dark"><i class='bx bxl-twitter'></i></a></li>
+    <li><a href="#" class="text-decoration-none text-dark"><i class='bx bxl-instagram'></i></a></li>
+  </ul>
+</div>
+</div>
+
+</div>
+</div>
+<!-- Menu canvas end-->
+
+<!-- right canvas -->
+<div class="offcanvas right-canvas offcanvas-end eg-box" tabindex="-1" id="rightsidebar" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+
+    <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="cross"><i class='bx bx-x text-reset'></i></button>  
+  </div>
+  <div class="offcanvas-body">
+
+    <div class="widget2 latest-post mt-4 pt-4">
+      <ul class="post-list">
+      <li class="mb-4">
+      <div class="single-post border bordered p-lg-4 d-flex align-items-center mb-3 p-1">
+      <div class="post-image">
+      <a href="#"><img src="images/guava3.png" alt=""></a>
+      </div>
+      <div class="post-content ">
+      <a href="#" class="text-decoration-none"><h6 class=" text-dark">Guava</h6></a>
+      <ul class="d-flex star-list">
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+      </ul>
+      <div class="price text-secondary">
+      <span class="fw-bold fs-5 ms-3">1x $10.36</span>
+      </div>
+      </div>
+      <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="cross"><i class='bx bx-x text-reset'></i></button>
+      </div>
+      </li>
+      <li class="mb-4">
+        <div class="single-post border bordered p-lg-4 d-flex align-items-center mb-3 p-1">
+        <div class="post-image">
+        <a href="#"><img src="images/kajos.png" alt=""></a>
+        </div>
+        <div class="post-content ms-2">
+        <a href="#" class="text-decoration-none"><h6 class=" text-dark">Nut</h6></a>
+        <ul class="d-flex star-list">
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+        </ul>
+        <div class="price text-secondary">
+        <span class="fw-bold fs-5 ms-3">1x $10.32</span>
+        </div>
+        </div>
+        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="cross"><i class='bx bx-x text-reset'></i></button>
+        </div>
+        </li>      
+        <li class="mb-4">
+          <div class="single-post border bordered p-lg-4 d-flex align-items-center mb-3 p-1">
+          <div class="post-image">
+          <a href="#"><img src="images/strawberry.png" alt=""></a>
+          </div>
+          <div class="post-content ms-2">
+          <a href="#" class="text-decoration-none"><h6 class=" text-dark">Strawberry</h6></a>
+          <ul class="d-flex star-list">
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+          </ul>
+          <div class="price text-secondary">
+          <span class="fw-bold fs-5 ms-3">1x $10.32</span>
+          </div>
+          </div>
+          <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="cross"><i class='bx bx-x text-reset'></i></button>
+          </div>
+          </li> 
+   
+      </ul>
+      </div>
+
+      <div class="widget2 mt-2">
+        <ul class="post-list mt-5 d-flex justify-content-between">
+          <li>
+            <a href="#" class="text-decoration-none rounded-pill text-secondary">Subtotal</a>
+          </li>
+          <li><a href="#" class="text-decoration-none text-dark price-btn fw-bold fs-5"> $64.08</a></li>
+
+        </ul>
+        </div>
+
+        <div class="cart-btn-group justify-content-center">
+    
+          <a href="checkout.html" class="org-btn eg-cart-btn checkout-btn pt-4 mb-2" width="200px">CHECKOUT</a>
+         
+          <a href="cart.html" class="eg-cart-btn cart-btn mt-4 fs-5">VIEW CART</a>
+      
+          </div>  
+        <div class="para mt-5">
+          <p><span class="fs-4 fw-bold text-dark">SHIPPING:</span>
+            <span class="text-secondary fs-4">
+              Continue shopping up to $64.08 and receive free shipping. Stay with EG
+            </span>
+          </p>
+        </div>
+
+
+  </div>
+</div>
+      
+<!-- right canvas end -->
+
+
+<!-- Search Modal -->
+<div class="modal fade" id="navsearch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+  
+    <div class="modal-body mt-4">
+      <div class="modal-pack ps-5">
+      <h5 >What are you looking for?</h5>
+      <input type="text"
+      placeholder="Search Products, Brand, Category" class="w-75 p-2 " style="border: none;">
+      <hr class="w-75 bottom">
+
+      </div>
+      <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+      
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- Modal End --> 
+
+<!-- Main -->
+<mian class="main">
+
+  <section class="section-banner ">
+    <div class="container">
+        <h2 class="text-center heading1"> Blog Details
+        <br> <span class="heading2"><a href="index.html" class="text-decoration-none text-light heading2">Home </a> > Blog Details</span></h2> 
+        </div>
+        
+    </section>
+
+    <section class="blog-standard-section mt-5 mx-lg-5 px-lg-5">
+      <div class="container-fluid mt-5 pt-5 px-lg-5">
+        <div class="row">
+        <div class="col-lg-8">
+          <div class="blog-style mb-5">
+            <div class="blog-image">
+            <a href="blogdetail.html"><img src="images/blogs1.jpg" alt=""></a>
+            </div>
+            <div class="blog-content bg-body px-md-2 px-lg-4">
+            <div class="blog-footer fw-bold d-flex justify-content-between align-items-center flex-wrap py-4">
+              <div class="btn-capsule">
+                <a href="blogdetail.html" class="text-secondary text-decoration-none">Grocery</a>
+              </div>
+            <div class="time text-secondary">
+              <i class='bx bx-time-five'></i><span>Date: 25 Jan 2021</span>
+            </div>
+            </div>
+            </div>
+            </div> 
+       
+              
+          <div class="blog-style mb-5">
+                <div class="blog-content1 px-md-2 px-lg-4">
+                <a href="blogdetail.html" class="text-decoration-none"><h4 class="blog-title pt-3
+                  text-dark">
+                  The name of your grocery store can make or break its success.
+                </h4></a>
+                <p class="my-3 sub-title">
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru mollit anim id est laborum
+                </p>
+
+                <p class="para pb-3">
+                  Gochujang ugh viral, butcher pabst put a bird on it meditation austin craft beer banh mi. Distillery ramps af, gochujang hell of VHS kitsch austin. Vegan air plant trust fund, poke sartorial ennui next level photo booth coloring book etsy green juice meditation austin craft beer. </p>
+          
+
+                  <div class="quote-area position-relative mb-3">
+                    <div class="position-absolute start-0 top-0">
+                    <img src="images/quote-s1.png" alt="">
+                    </div>
+                    <div class="position-absolute end-0 bottom-0">
+                    <img src="images/quote-s2.png" alt="">
+                    </div>
+                    <p class="mb-2">If the delivery provider maintains all the standards then it is safe to have get products delivered to you. It is hard to maintain but still safer to get your products ordered</p>
+                    <h5 class="quote-author">-Leslie Alexander-
+                    <img src="images/quoteicon.png" class="quoteicon" alt="">
+                    </h5>
+                    </div>  
+                    <p class="para mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed vel dignissimos dicta eum non illum aut vero voluptate repudiandae? Nobis, minima commodi, veniam recusandae iusto nulla sint facere eum et asperiores repellendus dolorum ut mollitia dignissimos atque ab temporibus totam quidem amet? Quibusdam accusantium tempore.</p>
+                    <div class="row mb-4">
+                      <div class="col-lg-5 video-btn">
+                     <div class="play-btn">
+                     <a href="https://www.youtube.com/watch?v=rFMwNqfg5-Y">
+                      <i class='bx bx-play circle'></i>
+                     </a>
+                     </div>    
+                      </div>
+                      <div class="col-lg-7">
+                      <div class="video-content px-lg-2">
+                      <p class="para mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis ex iure doloremque, expedita molestiae repudiandae. Deleniti optio consequuntur corporis totam facere, error minima reiciendis dicta tenetur, maiores autem veritatis explicabo maxime accusamus excepturi quidem dignissimos. </p>
+                      <h5 class="fw-bold">Excepteur sint occaecat cupidatat non proident, sunt.</h5>
+                      </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-5">
+                     <div class="col-12">
+                      <h4 class="mb-4 any-title">How can have anything you ant in life if you ?</h4>
+                      <p class="para">
+                        Fashion ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione </p>
+                        <p class="para">Fashion ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan tium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                      </p>
+                     </div>
+                    </div>  
+                    
+                  <div class="row mt-5">
+                  <div class="col-12 d-lg-flex justify-content-between  align-items-center icons-info">
+                  <div class="share d-lg-flex justify-content-center align-items-center">
+                  <span class="share-heading d-lg-block d-none">Share:</span>
+                  <span class="share-heading d-flex justify-content-center mb-5 d-lg-none">Share:</span>
+                  <ul class="d-flex pt-lg-5">
+                    <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                    <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                    <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                    <li><a href="#"><i class='bx bxl-pinterest'></i></a></li>
+                  </ul>  
+                  </div>
+
+                  <div class="share-btns d-flex justify-content-center">
+                    <a href="#"><i class='bx bx-left-arrow-alt'></i>Previous</a>
+                    <a href="#">Next<i class='bx bx-right-arrow-alt'></i></a>
+                  </div>
+                  </div>
+                  </div>  
+                <div class="row mt-5">
+                <div class="col-12">
+                  <h4 class="blog-title text-dark pt-3">
+                  Our 2 Comments
+                </h4>
+
+                <div class="comment-section d-flex mt-5">
+                <div class="viewer-image">
+                <img src="images/commnt1.jpg" alt="">
+                </div>
+                <div class="viewer-heading ms-3">
+                <h3>Jenny Wilson<span class="msg-date">-8th Jan 2021</span></h3>
+                  <ul class="d-flex star-list">
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-secondary"><i class="bx bxs-star"></i></li>
+                  </ul>
+              </div>
+              </div>
+              <div class="comment mt-3">
+              <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad molestias esse error eaque, magnam consequatur porro ab, non quo totam qui suscipit consequuntur perspiciatis accusamus sint vitae culpa quia doloremque? Placeat ullam corporis, cupiditate dolore nam qui earum.</p>
+              <div class="comment-icons d-flex">
+              <ul class="d-flex">
+              <li><i class='bx bx-like'></i></li>
+              <li><i class='bx bx-heart'></i></li>
+              </ul>
+              <a href="#" class="text-decoration-none ms-3">Reply</a>
+              </div>
+
+              </div>
+
+              <div class="comment-section d-flex mt-5">
+                <div class="viewer-image">
+                <img src="images/comment3.png" alt="">
+                </div>
+                <div class="viewer-heading ms-3">
+                <h3>Estjer Howard<span class="msg-date">-10th Feb 2021</span></h3>
+                  <ul class="d-flex star-list">
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-secondary"><i class="bx bxs-star"></i></li>
+                  </ul>
+              </div>
+              </div>
+              <div class="comment mt-3">
+              <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad molestias esse error eaque, magnam consequatur porro ab, non quo totam qui suscipit consequuntur perspiciatis accusamus sint vitae culpa quia doloremque? Placeat ullam corporis, cupiditate dolore nam qui earum.</p>
+              <div class="comment-icons d-flex">
+              <ul class="d-flex">
+              <li><i class='bx bx-like'></i></li>
+              <li><i class='bx bx-heart'></i></li>
+              </ul>
+              <a href="#" class="text-decoration-none ms-3">Reply</a>
+              </div>
+
+              </div>
+
+              <div class="comment-section last-comment d-flex mt-5 pt-5">
+                <div class="viewer-image">
+                <img src="images/commnt2.jpg" alt="">
+                </div>
+                <div class="viewer-heading ms-3">
+                <h3>Sara Waston<span class="msg-date">-10th Jan 2021</span></h3>
+                  <ul class="d-flex star-list">
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-secondary"><i class="bx bxs-star"></i></li>
+                  </ul>
+              </div>
+              </div>
+              <div class="comment end mt-3 pb-5">
+              <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad molestias esse error eaque, magnam consequatur porro ab, non quo totam qui suscipit consequuntur perspiciatis accusamus sint vitae culpa quia doloremque? Placeat ullam corporis, cupiditate dolore nam qui earum.</p>
+              <div class="comment-icons d-flex">
+              <ul class="d-flex">
+              <li><i class='bx bx-like'></i></li>
+              <li><i class='bx bx-heart'></i></li>
+              </ul>
+              <a href="#" class="text-decoration-none ms-3">Reply</a>
+              </div>
+              </div>
+            <div class="row">
+            <div class="col-12">
+              <div class="contact-form mb-5">
+                <div class="container-fluid">
+                 <div class="form-container">
+                 <div class="form-heading py-5">
+                  <h3>Leave A Comment</h3>
+                  <p>Your email address will not be published. Required fields are marked *</p>
+                 </div>
+              <form action="" class="form-contact">
+               <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-box1 d-flex flex-column">
+                      <label for="Name">Your Name</label>
+                    <input type="text" placeholder="Your Name" class="form-control shadow-none" id="Name">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-box1 d-flex flex-column mt-md-3">
+                    <label for="Email">Email</label>
+                    <input type="text" placeholder="Your Email" class="form-control shadow-none" id="Email">
+                    </div>
+                  </div>      
+                </div>
+                <div class="row mt-4">
+                <div class="col-12">
+                  <div class="mb-3">  
+                  <textarea class="form-control shadow-none" placeholder="Your message" id="exampleFormControlTextarea1" rows="6"></textarea>
+                  </div>
+                </div>
+                </div>
+               </div>
+              </form> 
+              
+              <button class="org-btn form-btn3 ">
+                <a href="about.html" class="btn-content">Post Comment</a>
+               </button>
+                 </div> 
+                </div>
+              </div>
+            </div>
+            </div>
+              
+                </div>
+                </div>
+
+                </div>    
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <aside class="blog-area">
+          <div class="widget2">
+          <h5 class="title-dash">BLOG CATEGORY</h5>
+        
+          <ul class="catagory-list">
+          <li><a href="#"><span class="text-start"><i class='bx bx-right-arrow-alt'></i>Fresh</span> 
+          <span class="float-end me-3">03</span></a></li>
+          <li><a href="#"><span  class="text-start"><i class='bx bx-right-arrow-alt'></i>Grocery</span> 
+          <span class="float-end me-3">06</span></a></li>
+          <li><a href="#"><span  class="text-start"><i class='bx bx-right-arrow-alt'></i>Vegetable </span> 
+          <span class="float-end me-3">05</span></a></li>
+          <li><a href="#"><span  class="text-start"><i class='bx bx-right-arrow-alt'></i>Meat & Fish</span> 
+          <span class="float-end me-3">10</span></a></li>
+          <li><a href="#"><span  class="text-start"><i class='bx bx-right-arrow-alt'></i>Pet Care</span> 
+          <span class="float-end me-3">09</span></a></li>
+          <li><a href="#"><span  class="text-start"><i class='bx bx-right-arrow-alt'></i>Shopping</span> 
+          <span class="float-end me-3">04</span></a></li>
+          </ul>
+          </div>
+          <div class="widget2 latest-post mt-4 pt-4">
+          <h5 class="title-dash">LATEST POST</h5>
+          <ul class="post-list">
+          <li class="mb-20">
+          <div class="single-post d-flex align-items-center mb-3">
+          <div class="post-image">
+          <a href="blogdetial.html"><img src="images/blg-grid3.jpg" alt=""></a>
+          </div>
+          <div class="post-content ms-2">
+          <a href="blogdetail.html"><h6 class="title-14 text-dark">The business of delivering restaurant meals to </h6></a>
+          <div class="post-date text-secondary">4th Jan 2021</div>
+          </div>
+          </div>
+          </li>
+          <li class="mb-2">
+          <div class="single-post d-flex align-items-center mb-3">
+          <div class="post-image">
+          <a href="blogdetial.html"><img src="images/blg-grid5.jpg" alt=""></a>
+          </div>
+          <div class="post-content ms-2">
+          <a href="blogdetail.html"><h6 class="text-dark">Although these new Internet platfor ms are. </h6></a>
+          <div class="post-date text-secondary">4th Jan 2021</div>
+          </div>
+          </div>
+          </li>
+          <li class="mb-2">
+          <div class="single-post d-flex align-items-center mb-3">
+          <div class="post-image">
+          <a href="blogdetial.html"><img src="images/blg-grid2.jpg" alt=""></a>
+          </div>
+          <div class="post-content ms-2">
+          <a href="blogdetail.html"><h6 class="title-14 text-dark">If the delivery provider maintains all</h6></a>
+          <div class="post-date text-secondary">4th Jan 2021</div>
+          </div>
+          </div>
+          </li>
+          <li>
+          <div class="single-post d-flex align-items-center mb-3">
+          <div class="post-image">
+          <a href="blogdetial.html"><img src="images/blg-grid1.jpg" alt=""></a>
+          </div>
+          <div class="post-content ms-2">
+          <a href="blogdetail.html"><h6 class="title-14 text-dark">Although these new Internet platfor ms are. </h6></a>
+          <div class="post-date text-secondary">4th Jan 2021</div>
+          </div>
+          </div>
+          </li>
+          </ul>
+          </div>
+          
+          <div class="widget2 py-4 mt-5">
+          <h5 class="title-dash">PRODUCT TAG</h5>
+          <ul class="product-list d-flex flex-wrap">
+          <li><a href="#">Casual</a></li>
+          <li><a href="#">Kurtas &amp; Kurtis</a></li>
+          <li><a href="#">Summer</a></li>
+          <li><a href="#">Summer</a></li>
+          <li><a href="#">Winter</a></li>
+          <li><a href="#">Woman</a></li>
+          <li><a href="#">Woman</a></li>
+          <li><a href="#">Man</a></li>
+          <li><a href="#">Coot</a></li>
+          </ul>
+          </div>
+          
+          <div class="widget2 mt-5">
+          <h5 class="title-dash">OUR FOLLOWER</h5>
+          <ul class="catagory-list">
+          <li><a href="#"  class="text-secondary"><span class="text-start"><i class='bx bxl-facebook me-2'></i>Facebook</span> <span class="float-end me-3">50,520</span></a></li>
+          <li><a href="#"  class="text-secondary"><span><i class='bx bxl-instagram me-2'></i>Twitter</span> <span class="float-end me-3">42,035</span></a></li>
+          <li><a href="#"  class="text-secondary"><span><i class='bx bxl-twitter me-2'></i>Instagram </span> <span class="float-end me-3">3,850</span></a></li>
+          <li><a href="#"  class="text-secondary"><span><i class='bx bxl-pinterest me-2'></i>Pinterest</span> <span class="float-end me-3">10,590</span></a></li>
+          </ul>
+          </div>
+          
+          <div class="widget2 mt-5 pt-3">
+            <h5 class="title-dash">ARCHIVES</h5>
+            <ul class="catagory-list">
+            <li><a href="#"  class="text-secondary">5th January 2021</a></li>
+            <li><a href="#"  class="text-secondary">26th February 2020</a></li>
+            <li><a href="#"  class="text-secondary">26th August 2020</a></li>
+            </ul>
+            </div>
+
+
+        </div>
+      </div>
+    </section>    
+
+
+    
+</mian>
+
+
+<!-- footer --> 
+
+<footer class="footer-section">
+  <div class="container">
+    <div class="row">
+  <div class="col-xl-12 col-lg-12 col-sm-12 col-12">
+<div class="footer-content">
+  <div class="row justify-content-between gy-5">
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 first-box">
+    <div class="single-widget">
+    <div class="footer-title">
+    <h3>About EG Shop</h3>
+    </div>
+    <div class="footerabout-content">
+    <p>EG STORE - worldwide Grocery store since 2021. We sell over 2000+ Category
+    products on our web-site.</p>
+    </div>
+    <div class="footer-address">
+      <ul>
+      <li >
+        <i class='bx bx-phone-call foooter-bx'></i>
+      <span><a href="tel:123456781233" class="text-decoration-none">+1234 5678 1233</a> <br> <a href="tel:123445651343" class="text-decoration-none ms-1">+1234 4565 1343</a></span>
+      </li>
+      <li >
+      <i class='bx bx-envelope footer-bx' ></i>
+      <span><a href="mailto:info@example.com" class="text-decoration-none">info@example.com</a> <br><a href="mailto:info@example.com" class="text-decoration-none ms-1">support@example.com</a></span>
+</li>
+<li>
+<i class='bx bx-location-plus footer-bx' ></i>
+<span >3102 Bartlett Avenue <br> Southfield, MI 48075</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12 second-box">
+<div class="single-widget text-lg-center ">
+<div class="footer-logo">
+<a href="index.html"><img src="images/footer-logo.png" alt="" ></a>
+<p>Register now to get update on promotion and coupons. Don't worry! It's not
+Spam</p>
+</div>
+<div class="search-box">
+<form action="index.html">
+<input type="text" placeholder="Your Email">
+<button class="form-btn2">Send</button>
+</form>
+</div>
+<div class="footer-social pt-5">
+<ul class="d-flex justify-content-evenly align-items-center me-5 mt-5">
+<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 third-box">
+<div class="single-widget">
+<div class="footer-title">
+<h3>Company</h3>
+</div>
+<div class="footer-link">
+<ul>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Returns</a></li>
+<li><a href="#">Terms &amp; Conditions</a></li>
+<li><a href="#">Our Support</a></li>
+<li><a href="#">Terms &amp; Service</a></li>
+<li><a href="#">Checkout</a></li>
+<li><a href="#">Other Issues</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row footer-bottom align-items-center justify-content-center">
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-lg-start text-center">
+  <div class="bottom-area ">
+  <p class="copy-text">Copyright 2021 EG-Shop Grocery | Design By <a href="#" class="text-decoration-none text-light">Egens Lab</a></p>
+  </div>
+  </div>
+  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+  <div class="footer-card-support text-lg-end text-center">
+  <ul>
+  <li><a href="#" class="text-decoration-none"><img src="images/paypal.svg" alt=""></a></li>
+  <li><a href="#"><img src="images/payonert.svg" alt=""></a></li>
+  <li><a href="#"><img src="images/visa.svg" alt=""></a></li>
+  </ul>
+  </div>
+  </div>
+ 
+  </div>
+  </footer>   
+
+
+
+
+
+
+   <!-- bootstrap js  -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

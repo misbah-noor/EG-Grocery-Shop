@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Detail Page</title>
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+    <!--boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="responsive.css">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="product-detail">
+    
+
+        <!--Navbar Section Start-->
+        <div class=" header-1">
+            <nav class="navbar navbar-light bg-dark fixed-top">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="https://public-assets.envato-static.com/assets/logos/envato_market-dd390ae860330996644c1c109912d2bf63885fc075b87215ace9b5b4bdc71cc8.svg" alt="" width="160" height="34">
+                  </a>
+                  <button type="button" class="button btn ">Buy Now</button>
+                </div>
+              </nav>
+            </div>
+    
+          <!--2nd navbar-->
+          <div class="pagesheader fixed-top">
+            <nav class="navbar navbar-expand-lg w-100  shadow px-lg-5 ps-md-1 py-3 ">
+              <div class="container-fluid mx-lg-5 mx-md-1">
+                <a class="navbar-brand" href="#">
+                  <img src="images/logo-2.png" alt="logo" 
+                >
+                </a>
+               
+                <form class="d-flex d-lg-block d-none justify-content-center ms-auto w-50">
+    
+                <div class="input-group justify-content-center">
+                    <input type="text" class=" form-control fs-5 ps-4 text-secondary shadow-none" style="border-radius: 10px 0 0 10px;" placeholder="Search Product">
+                       <button class="n-btn"
+                       type="submit" style="border-radius: 0 10px 10px 0;">
+                       Search
+                       </button>
+                       </div>
+                  </form> 
+    
+                  <ul class="navbar-nav ms-lg-auto d-md-flex flex-row ">
+    
+                        <li class="nav-item pagesnav d-lg-none d-block ">
+                            <a class="nav-link "
+                            data-bs-toggle="modal" data-bs-target="#navsearch"  
+                            href=""><img src="images/search.png" alt="search" ></a>
+                        </li>
+                          <li class="nav-item pagesnav">
+                            <a class="nav-link me-1" href="myaccount.html"><img src="images/user.png" alt="user"></a>
+                          </li>
+                      <!-- menu button -->
+                            <div class="align-self-center">
+                              <div class="toggle mt-2">
+                                <a class="btn shadow-none" data-bs-toggle="offcanvas" href="#menu-canvas" role="button" aria-controls="offcanvasExample">
+                                  <i class='bx bx-menu fs-3 '></i>
+                                </a> 
+                              </div>
+                            </div>
+    
+                          <li class="nav-item pagesnav ">
+                            <a class="nav-link me-4 position-relative"  data-bs-toggle="offcanvas" href="#rightsidebar" role="button" aria-controls="offcanvasExample"><img src="images/shopping-cart.png" alt="cart" >
+                              <span class="position-absolute top-3 start-100 translate-middle p-1 badge rounded-circle bg-dark fw-light">
+                                12</span> </a>
+                          </li>         
+                      </ul>
+                      <div class="header-right  d-lg-block d-none mb-3">
+                         <div class="nav-phone d-flex  ">
+                        <i class='bx bx-phone-call fs-1 d-flex justify-content-  center mt-4'></i>
+                          <div class="text-lg-end d-flex flex-column mt-2">
+                              <span class="text-secondary me-5">Hot Line Number</span>
+                              <span class=" info me-3 ">+880 176 1111 456</span>
+                          </div>
+                      </div>
+                      </div>
+      
+                
+              </div>
+            </nav>
+            </div>
+            
+    
+    <!-- Menu Canvas-->
+            
+    <div class="offcanvas menu-canvas offcanvas-start" tabindex="-1" id="menu-canvas" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="back"><i class='bx bx-arrow-back text-reset'></i></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed fs-5 shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Home
+              </button>
+            </h3>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <ul class="page-ul">
+                  <li class="page-list"><a class="text-dark text-decoration-none" href="index.html">Home1</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="#">Home2</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed fs-5 shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Shop
+              </button>
+            </h3>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <ul class="page-ul">
+                  <li class="page-list"><a class="text-dark text-decoration-none" href="product.html">Product</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="productdetail.html">Product Details</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="productsidebar.html">Product Sidebar</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>   
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingthree">
+              <button class="accordion-button collapsed fs-5 shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsethree" aria-expanded="false" aria-controls="flush-collapsethree">
+                Pages
+              </button>
+            </h3>
+            <div id="flush-collapsethree" class="accordion-collapse collapse" aria-labelledby="flush-headingthree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <ul class="page-ul">
+                  <li class="page-list"><a class="text-dark text-decoration-none" href="about.html">About</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="cart.html">Cart</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="checkout.html">Checkout</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="myaccount.html">My Account</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="login.html">Login Register</a></li>    <li class="page-list"><a class="text-dark fw- text-decoration-none" href="FAQ.html">FAQ</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="Error.html">Error</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="flush-headingfour">
+              <button class="accordion-button collapsed fs-5 shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+                Blog
+              </button>
+            </h3>
+            <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <ul class="page-ul">
+                  <li class="page-list"><a class="text-dark text-decoration-none" href="blog grid.html">Blog Grid</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="blogstandard.html">Blog Standard</a></li>
+                  <li class="page-list"><a class="text-dark fw- text-decoration-none" href="blogdetail.html">Blog Details</a></li>
+                </ul>
+              </div>
+            </div>   
+          </div>   
+        </div>
+        <ul class="page-ul">
+        <li class="page-list style-none"><a href="contact.html" class="text-decoration-none text-dark fs-5 conta">Contact</a></li>
+      </ul>
+    
+      <div class="intouch">
+        <div class="mainheading">
+          <h3>Get in touch</h3>
+        </div>
+        <div class="para">
+          <p class="text-secondary">541 Melville Ave, Palo Alto, CA 94301 <br> connect.us@gmail.com</p>
+        </div>
+        <div class="linkss">
+          <ul class="d-flex">
+            <li><a href="#" class="text-decoration-none text-dark"><i class='bx bxl-facebook'></i></a></li>
+            <li><a href="#" class="text-decoration-none text-dark"><i class='bx bxl-whatsapp'></i></a></li>
+            <li><a href="#" class="text-decoration-none text-dark"><i class='bx bxl-twitter'></i></a></li>
+            <li><a href="#" class="text-decoration-none text-dark"><i class='bx bxl-instagram'></i></a></li>
+          </ul>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+    <!-- Menu canvas end-->
+    
+    <!-- right canvas -->
+<div class="offcanvas right-canvas offcanvas-end eg-box" tabindex="-1" id="rightsidebar" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+
+    <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="cross"><i class='bx bx-x text-reset'></i></button>  
+  </div>
+  <div class="offcanvas-body">
+
+    <div class="widget2 latest-post mt-4 pt-4">
+      <ul class="post-list">
+      <li class="mb-4">
+      <div class="single-post border bordered p-lg-4 d-flex align-items-center mb-3 p-1">
+      <div class="post-image">
+      <a href="#"><img src="images/guava3.png" alt=""></a>
+      </div>
+      <div class="post-content ">
+      <a href="#" class="text-decoration-none"><h6 class=" text-dark">Guava</h6></a>
+      <ul class="d-flex star-list">
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+        <li class="text-warning"><i class="bx bxs-star"></i></li>
+      </ul>
+      <div class="price text-secondary">
+      <span class="fw-bold fs-5 ms-3">1x $10.36</span>
+      </div>
+      </div>
+      <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="cross"><i class='bx bx-x text-reset'></i></button>
+      </div>
+      </li>
+      <li class="mb-4">
+        <div class="single-post border bordered p-lg-4 d-flex align-items-center mb-3 p-1">
+        <div class="post-image">
+        <a href="#"><img src="images/kajos.png" alt=""></a>
+        </div>
+        <div class="post-content ms-2">
+        <a href="#" class="text-decoration-none"><h6 class=" text-dark">Nut</h6></a>
+        <ul class="d-flex star-list">
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+          <li class="text-warning"><i class="bx bxs-star"></i></li>
+        </ul>
+        <div class="price text-secondary">
+        <span class="fw-bold fs-5 ms-3">1x $10.32</span>
+        </div>
+        </div>
+        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="cross"><i class='bx bx-x text-reset'></i></button>
+        </div>
+        </li>      
+        <li class="mb-4">
+          <div class="single-post border bordered p-lg-4 d-flex align-items-center mb-3 p-1">
+          <div class="post-image">
+          <a href="#"><img src="images/strawberry.png" alt=""></a>
+          </div>
+          <div class="post-content ms-2">
+          <a href="#" class="text-decoration-none"><h6 class=" text-dark">Strawberry</h6></a>
+          <ul class="d-flex star-list">
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+            <li class="text-warning"><i class="bx bxs-star"></i></li>
+          </ul>
+          <div class="price text-secondary">
+          <span class="fw-bold fs-5 ms-3">1x $10.32</span>
+          </div>
+          </div>
+          <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="cross"><i class='bx bx-x text-reset'></i></button>
+          </div>
+          </li> 
+   
+      </ul>
+      </div>
+
+      <div class="widget2 mt-2">
+        <ul class="post-list mt-5 d-flex justify-content-between">
+          <li>
+            <a href="#" class="text-decoration-none rounded-pill text-secondary">Subtotal</a>
+          </li>
+          <li><a href="#" class="text-decoration-none text-dark price-btn fw-bold fs-5"> $64.08</a></li>
+
+        </ul>
+        </div>
+
+        <div class="cart-btn-group justify-content-center">
+    
+          <a href="checkout.html" class="org-btn eg-cart-btn checkout-btn pt-4 mb-2" width="200px">CHECKOUT</a>
+         
+          <a href="cart.html" class="eg-cart-btn cart-btn mt-4 fs-5">VIEW CART</a>
+      
+          </div>  
+        <div class="para mt-5">
+          <p><span class="fs-4 fw-bold text-dark">SHIPPING:</span>
+            <span class="text-secondary fs-4">
+              Continue shopping up to $64.08 and receive free shipping. Stay with EG
+            </span>
+          </p>
+        </div>
+
+
+  </div>
+</div>
+      
+<!-- right canvas end -->
+    
+      <!-- Search Modal -->
+      <div class="modal fade" id="navsearch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <div class="modal-body mt-4">
+              <div class="modal-pack ps-5">
+              <h5 >What are you looking for?</h5>
+              <input type="text"
+              placeholder="Search Products, Brand, Category" class="w-75 p-2 " style="border: none;">
+              <hr class="w-75 bottom">
+    
+              </div>
+              <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+              
+            </div>
+        
+          </div>
+        </div>
+      </div>
+    <!-- Modal End --> 
+
+    <!-- main -->
+<main class="main">
+    <section class="section-banner ">
+        <div class="container">
+            <h2 class="text-center heading1"> Product Details
+                <br> <span class="heading2"><a href="index.html" class="text-decoration-none text-light heading2">Home </a> > Product Details</span></h2> 
+            </div>
+            
+        </section>
+
+      <section class="product-detail-section mt-5 mx-lg-5 px-lg-5">
+        <div class="container-fluid pt-5 mt-5 px-lg-4">
+          <div class="row">
+            <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="nav nav-pills d-none  d-lg-block flex-column nav-justified ms-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a href="#v-pills-apple" class="nav-link active bg-body border bordered box-shadow mb-3" id="v-pills-apple-tab" data-bs-toggle="pill" role="tab"><img src="images/cherries.png" alt="" ></a>
+                  <a href="#v-pills-gava" class="nav-link bg-body border bordered box-shadow mb-3" id="v-pills-gava-tab" data-bs-toggle="pill" role="tab"><img src="images/guava3.png" alt=""></a>
+                  <a href="#v-pills-beatroot" class="nav-link bg-body mb-3 border bordered box-shadow" id="v-pills-beatroot-tab" data-bs-toggle="pill" role="tab"><img src="images/beatroot.png" alt=""></a>
+                 
+                </div>
+       
+                <div class="nav nav-pills nav-justified ms-5 d-lg-none mobile-pill" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a href="#v-pills-apple" class="nav-link active bg-body border bordered box-shadow mb-3" id="v-pills-apple-tab" data-bs-toggle="pill" role="tab"><img src="images/cherries.png" alt="" ></a>
+                  <a href="#v-pills-gava" class="nav-link bg-body border bordered box-shadow mb-3" id="v-pills-gava-tab" data-bs-toggle="pill" role="tab"><img src="images/guava3.png" alt=""></a>
+                  <a href="#v-pills-beatroot" class="nav-link bg-body mb-3 border bordered box-shadow" id="v-pills-beatroot-tab" data-bs-toggle="pill" role="tab"><img src="images/beatroot.png" alt=""></a>
+                 
+                </div>
+    
+              </div>
+              <div class="col-lg-8">
+              <div class="tab-content" id="v-pills-tabcontent">
+                <div class="tab-pane fade show active" id="v-pills-apple" role="tabpanel">
+                  <div class="gava-image position-relative box-shadow">
+                    <img src="images/cherries.png" alt="">
+                    <div class="badge">
+                      <a href="#" class="text-decoration-none">-10%</a>
+                    </div>
+                  </div>
+                  </div>
+              <div class="tab-pane fade" id="v-pills-gava" role="tabpanel">
+              <div class="gava-image box-shadow position-relative">
+                <img src="images/guava3.png" alt="">
+                <div class="badge">
+                  <a href="#" class="text-decoration-none">-10%</a>
+                </div>
+              </div>
+              </div>
+                <div class="tab-pane fade" id="v-pills-beatroot" role="tabpanel">
+                  <div class="gava-image box-shadow position-relative">
+                    <img src="images/beatroot.png" alt="">
+                    <div class="badge">
+                      <a href="#" class="text-decoration-none">-10%</a>
+                    </div>
+                  </div>
+                  </div>
+    
+              </div>
+              </div>
+            </div>
+    
+            </div>
+            <div class="col-lg-6">
+              <div class="detail-content">
+                  <ul class="d-flex star-list mb-4">
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li class="text-warning"><i class="bx bxs-star"></i></li>
+                    <li>(32 Review)</li>
+                  </ul>
+                  <div class="detail-heading mb-3 pb-3">
+                  <h3>Fresh organic Vegetable Fruit</h3>
+                  <h3 class="text-org">$41.36</h3> 
+                  </div>
+
+                  <p class="text-gray">
+                    RIBCAGE STR ANK RAINBOW - B lue High-rise straight-leg jeans Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                  <div class="quantity">
+                    <input type="number" min="1" max="90" step="10" value="1">
+                    <div class="quantity-nav">
+                    <div class="quantity-button quantity-up">
+                    <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="quantity-button quantity-down">
+                    <i class='bx bx-minus'></i>
+                    </div>
+                    </div>
+                    </div>
+                    <button class="org-btn detail-btn ms-4">
+                      <a href="about.html" class="btn-content">Add to cart</a>
+                     </button> 
+                   <ul class="content-list">
+                    <li class="text-secondary">Product Type: <span class="text-lightgray">Organic</span></li>
+                    <li class="text-secondary">MGF: <span class="text-lightgray">July 4, 2021</span></li>
+                    <li class="text-secondary">Life: <span class="text-lightgray">05 Days</span></li>
+                    <li class="text-secondary">Category: <span class="text-lightgray">Grocery & Staples</span></li>
+                   </ul> 
+              </div>
+            </div> 
+            </div>
+          </div>
+           
+      </section> 
+      
+      <div class="account px-lg-5 mx-lg-5">
+        <div class="container-fluid inner-container px-lg-5">
+          <div class="row">
+            <div class="product-area widget2">
+              <h5 class="title-dash mt-5">Product Details</h5>
+              </div>
+             </div>
+          <div class="row pt-5">
+            <div class="col-lg-3 mb-5"> 
+            <div class="nav flex-column top-btn nav-pills nav-justified mx-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a href="#v-pills-discription" class="nav-link active mb-3" id="v-pills-discription-tab" data-bs-toggle="pill" role="tab">Discription</a>
+              <a href="#v-pills-review" class="nav-link mb-3" id="v-pills-review-tab" data-bs-toggle="pill" role="tab">Our Review(2)</a>
+            </div>
+          </div>
+  
+          <div class="col-lg-9 top">
+          <div class="tab-content" id="v-pills-tabcontent">
+          <div class="tab-pane fade show active" id="v-pills-discription" role="tabpanel">
+            <div class="dashboard-area box-pill-shadow ">
+            <p class="para text-lightgray fs-4 text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, dicta consectetur, vel consequuntur quos, recusandae id a facere voluptas dolore natus inventore nemo aliquid. Velit ipsam quae repellat nihil odio quod, accusantium distinctio voluptatum perferendis beatae sunt eum inventore assumenda aperiam, ratione recusandae. Ea nulla laudantium atque temporibus, quam nisi modi expedita rerum, dolores molestias animi, odit perspiciatis excepturi nam! Amet autem facilis assumenda neque a similique quaerat iste, beatae reprehenderit veniam odit hic quo consectetur quasi distinctio facere blanditiis nemo cum adipisci laudantium odio labore? Veniam, corrupti harum, reprehenderit ea, dolorem natus sit voluptatum similique at libero tempora reiciendis.</p>
+        
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-review" role="tabpanel">
+              <div class="blog-standard-section">
+                <div class="container-fluid">
+                      
+                    <div class="blog-style">
+                          <div class="blog-content1 ">                 
+                          <div class="row">
+                          <div class="col-12">
+                          <div class="border bordered px-4">
+                          <div class="comment-section d-flex mt-5">
+                          <div class="viewer-image">
+                          <img src="images/commnt1.jpg" alt="">
+                          </div>
+                          <div class="viewer-heading ms-3">
+                          <h3>Jenny Wilson<span class="msg-date">-8th Jan 2021</span></h3>
+                            <ul class="d-flex star-list">
+                              <li class="text-warning"><i class="bx bxs-star"></i></li>
+                              <li class="text-warning"><i class="bx bxs-star"></i></li>
+                              <li class="text-warning"><i class="bx bxs-star"></i></li>
+                              <li class="text-warning"><i class="bx bxs-star"></i></li>
+                              <li class="text-secondary"><i class="bx bxs-star"></i></li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="comment mt-3">
+                        <p class="fs-5 text-start text-lightgray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad molestias esse error eaque, magnam consequatur porro ab, non quo totam qui suscipit consequuntur perspiciatis accusamus sint vitae culpa quia doloremque? Placeat ullam corporis, cupiditate dolore nam qui earum.</p>
+                        <div class="comment-icons d-flex">
+                        <ul class="d-flex">
+                        <li><i class='bx bx-like'></i></li>
+                        <li><i class='bx bx-heart'></i></li>
+                        </ul>
+                        <a href="#" class="text-decoration-none ms-3">Reply</a>
+                        </div>
+          
+                        </div>
+
+                        </div>
+                        <div class="border bordered px-4 mt-5">
+                          <div class="comment-section d-flex mt-5">
+                          <div class="viewer-image">
+                          <img src="images/commnt2.jpg" alt="">
+                          </div>
+                          <div class="viewer-heading ms-3">
+                          <h3>Sara Waston<span class="msg-date">-10th Jan 2021</span></h3>
+                            <ul class="d-flex star-list">
+                              <li class="text-warning"><i class="bx bxs-star"></i></li>
+                              <li class="text-warning"><i class="bx bxs-star"></i></li>
+                              <li class="text-warning"><i class="bx bxs-star"></i></li>
+                              <li class="text-warning"><i class="bx bxs-star"></i></li>
+                              <li class="text-secondary"><i class="bx bxs-star"></i></li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="comment mt-3">
+                        <p class="fs-5 text-start text-lightgray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad molestias esse error eaque, magnam consequatur porro ab, non quo totam qui suscipit consequuntur perspiciatis accusamus sint vitae culpa quia doloremque? Placeat ullam corporis, cupiditate dolore nam qui earum.</p>
+                        <div class="comment-icons d-flex">
+                        <ul class="d-flex">
+                        <li><i class='bx bx-like'></i></li>
+                        <li><i class='bx bx-heart'></i></li>
+                        </ul>
+                        <a href="#" class="text-decoration-none ms-3">Reply</a>
+                        </div>
+          
+                        </div>
+
+                        </div>          
+             
+                      <div class="row">
+                      <div class="col-12">
+                        <div class="contact-form mb-5">
+                           <div class="form-container">
+                           <div class="form-heading py-5">
+                            <h3>Leave A Comment</h3>
+                            <p>Your email address will not be published. Required fields are marked *</p>
+                           </div>
+                        <form action="" class="form-contact">
+                         <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <div class="input-box1 d-flex flex-column mt-3">
+                                <label for="Name">Your Name</label>
+                              <input type="text" placeholder="Your Name" class="form-control shadow-none" id="Name">
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="input-box1 d-flex flex-column mt-md-3">
+                              <label for="Email">Email</label>
+                              <input type="text" placeholder="Your Email" class="form-control shadow-none" id="Email">
+                              </div>
+                            </div>      
+                          </div>
+                          <div class="row mt-4">
+                          <div class="col-12">
+                            <div class="mb-3">  
+                            <textarea class="form-control shadow-none" placeholder="Your message" id="exampleFormControlTextarea1" rows="6"></textarea>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="rating">
+                            <h6 class="mt-3">Your Rating</h6>
+                            <ul class="star-list d-flex">
+                              <li><i class='bx bxs-star'></i></li>
+                              <li><i class='bx bxs-star'></i></li>
+                              <li><i class='bx bxs-star'></i></li>
+                              <li><i class='bx bxs-star'></i></li>
+                              <li><i class='bx bxs-star'></i></li>
+                            </ul>
+                          </div>
+                         </div>
+
+                        </form> 
+
+                        
+                        <button class="org-btn form-btn3">
+                          <a href="about.html" class="btn-content">Post Comment</a>
+                         </button>
+                           </div> 
+                        </div>
+                      </div>
+                      </div>
+                        
+                          </div>
+                          </div>
+          
+                          </div>    
+                    </div>
+             
+                  </div>
+    
+          </div>                  
+                </div>  
+                </div>       
+            
+  
+          </div>
+          </div>
+        </div>
+      </div>  
+    
+      <section class="product-section-detail mx-lg-5">
+        <div class="container-fluid px-lg-5">
+          <div class="row">
+            <div class="product-area widget2">
+              <h5 class="title-dash mt-5">Related Product</h5>      
+            </div>
+            <div class="row mt-5 px-lg-5">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+              <div class="eg-product-card-page">
+              <div class="product-card-top">
+              <h4 class="discount-percentage py-2 px-3 ">-25% off</h4>
+            </div>
+            <div class="prod-image">
+              <img src="images/pomegra.png" alt="loading...">
+             
+              </div>
+              <i class='bx bx-heart pages-heart prod-img'></i>
+              
+            
+              <div class="eg-product-body">
+              <h5 class="eg-product-title"><a href="productdetail.html" class="text-dark">Fresh Pomegranate</a></h5>
+              
+              <div class="eg-product-card-price">
+                <h5 class="prod-price"><span> <del class="text-secondary fs-5">$3.15/ kG</del> </span> $12/ kG</h5>
+              </div>
+              <div class="product-card-bottom">
+              <div class="product-rating ">
+             <i class='bx bxs-star' ></i>
+             <i class='bx bxs-star' ></i>
+             <i class='bx bxs-star' ></i>
+             <i class='bx bxs-star' ></i>
+             <i class='bx bxs-star' ></i>
+              </div>
+              <div class="product-add-btn">
+              <a href="cart.html">Add to cart <i class='bx bx-plus'></i></a>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="eg-product-card-page">
+                <div class="product-card-top">
+                <h4 class="discount-percentage py-2 px-3 ">-25% off</h4>
+              </div>
+              <div class="prod-image">
+                <img src="images/greenapp.png" alt="loading...">
+               
+                </div>
+                <i class='bx bx-heart pages-heart prod-img'></i>
+                
+              
+                <div class="eg-product-body">
+                <h5 class="eg-product-title"><a href="productdetail.html" class="text-dark">Fresh Organic Apple</a></h5>
+                
+                <div class="eg-product-card-price">
+                  <h5 class="prod-price"><span> <del class="text-secondary fs-5">$3.15/ kG</del> </span> $12/ kG</h5>
+                </div>
+                <div class="product-card-bottom">
+                <div class="product-rating ">
+               <i class='bx bxs-star' ></i>
+               <i class='bx bxs-star' ></i>
+               <i class='bx bxs-star' ></i>
+               <i class='bx bxs-star' ></i>
+               <i class='bx bxs-star' ></i>
+                </div>
+                <div class="product-add-btn">
+                <a href="cart.html">Add to cart <i class='bx bx-plus'></i></a>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                  <div class="eg-product-card-page">
+                  <div class="product-card-top">
+                  <h4 class="discount-percentage py-2 px-3 ">-25% off</h4>
+                </div>
+                <div class="prod-image">
+                  <img src="images/guava3.png" alt="loading...">
+                 
+                  </div>
+                  <i class='bx bx-heart pages-heart prod-img'></i>
+                  
+                
+                  <div class="eg-product-body">
+                  <h5 class="eg-product-title"><a href="productdetail.html" class="text-dark">Fresh Guava</a></h5>
+                  
+                  <div class="eg-product-card-price">
+                    <h5 class="prod-price"><span> <del class="text-secondary fs-5">$3.15/ kG</del> </span> $14/ kG</h5>
+                  </div>
+                  <div class="product-card-bottom">
+                  <div class="product-rating ">
+                 <i class='bx bxs-star' ></i>
+                 <i class='bx bxs-star' ></i>
+                 <i class='bx bxs-star' ></i>
+                 <i class='bx bxs-star' ></i>
+                 <i class='bx bxs-star' ></i>
+                  </div>
+                  <div class="product-add-btn">
+                  <a href="cart.html">Add to cart <i class='bx bx-plus'></i></a>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="eg-product-card-page">
+                    <div class="product-card-top">
+                    <h4 class="discount-percentage py-2 px-3 ">-25% off</h4>
+                  </div>
+                  <div class="prod-image">
+                    <img src="images/strawberry.png" alt="loading">
+                   
+                    </div>
+                    <i class='bx bx-heart pages-heart prod-img'></i>
+                    
+                  
+                    <div class="eg-product-body">
+                    <h5 class="eg-product-title"><a href="productdetail.html" class="text-dark">Fresh Strawberry</a></h5>
+                    
+                    <div class="eg-product-card-price">
+                      <h5 class="prod-price"><span> <del class="text-secondary fs-5">$3.15/ kG</del> </span> $01/ kG</h5>
+                    </div>
+                    <div class="product-card-bottom">
+                    <div class="product-rating ">
+                   <i class='bx bxs-star' ></i>
+                   <i class='bx bxs-star' ></i>
+                   <i class='bx bxs-star' ></i>
+                   <i class='bx bxs-star' ></i>
+                   <i class='bx bxs-star' ></i>
+                    </div>
+                    <div class="product-add-btn">
+                    <a href="cart.html">Add to cart <i class='bx bx-plus'></i></a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+            </div>
+          </div>
+  
+        </div>
+
+      </section>
+    
+        </main>
+    
+
+        <!-- footer --> 
+
+      <footer class="footer-section">
+        <div class="container">
+          <div class="row">
+        <div class="col-xl-12 col-lg-12 col-sm-12 col-12">
+      <div class="footer-content">
+        <div class="row justify-content-between gy-5">
+          <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 first-box">
+          <div class="single-widget">
+          <div class="footer-title">
+          <h3>About EG Shop</h3>
+          </div>
+          <div class="footerabout-content">
+          <p>EG STORE - worldwide Grocery store since 2021. We sell over 2000+ Category
+          products on our web-site.</p>
+          </div>
+          <div class="footer-address">
+            <ul>
+            <li >
+              <i class='bx bx-phone-call foooter-bx'></i>
+            <span><a href="tel:123456781233" class="text-decoration-none">+1234 5678 1233</a> <br> <a href="tel:123445651343" class="text-decoration-none ms-1">+1234 4565 1343</a></span>
+            </li>
+            <li >
+            <i class='bx bx-envelope footer-bx' ></i>
+            <span><a href="mailto:info@example.com" class="text-decoration-none">info@example.com</a> <br><a href="mailto:info@example.com" class="text-decoration-none ms-1">support@example.com</a></span>
+    </li>
+    <li>
+      <i class='bx bx-location-plus footer-bx' ></i>
+    <span >3102 Bartlett Avenue <br> Southfield, MI 48075</span>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12 second-box">
+      <div class="single-widget text-lg-center ">
+      <div class="footer-logo">
+      <a href="index.html"><img src="images/footer-logo.png" alt="" ></a>
+      <p>Register now to get update on promotion and coupons. Don't worry! It's not
+      Spam</p>
+      </div>
+      <div class="search-box">
+      <form action="index.html">
+      <input type="text" placeholder="Your Email">
+      <button class="form-btn2">Send</button>
+    </form>
+    </div>
+    <div class="footer-social pt-5">
+    <ul class="d-flex justify-content-evenly align-items-center me-5 mt-5">
+    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 third-box">
+    <div class="single-widget">
+    <div class="footer-title">
+    <h3>Company</h3>
+    </div>
+    <div class="footer-link">
+    <ul>
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Returns</a></li>
+    <li><a href="#">Terms &amp; Conditions</a></li>
+    <li><a href="#">Our Support</a></li>
+    <li><a href="#">Terms &amp; Service</a></li>
+    <li><a href="#">Checkout</a></li>
+    <li><a href="#">Other Issues</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="row footer-bottom align-items-center justify-content-center">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-lg-start text-center">
+        <div class="bottom-area ">
+        <p class="copy-text">Copyright 2021 EG-Shop Grocery | Design By <a href="#" class="text-decoration-none text-light">Egens Lab</a></p>
+        </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="footer-card-support text-lg-end text-center">
+        <ul>
+        <li><a href="#" class="text-decoration-none"><img src="images/paypal.svg" alt=""></a></li>
+        <li><a href="#"><img src="images/payonert.svg" alt=""></a></li>
+        <li><a href="#"><img src="images/visa.svg" alt=""></a></li>
+        </ul>
+        </div>
+        </div>
+       
+        </div>
+        </footer>
+
+
+
+
+
+
+
+   <!-- bootstrap js  -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

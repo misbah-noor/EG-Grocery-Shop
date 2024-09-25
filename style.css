@@ -1432,7 +1432,7 @@ transition: all 0.3s ease;
         }
         
         .footer-section .footer-content{
-            padding: 80px 69px;
+            padding: 80px 64px;
         }
         
         .footer-section .footer-title h3{
@@ -1518,7 +1518,6 @@ transition: all 0.3s ease;
             position: absolute;
             content: "";
             left: -15%;
-
             top: 50%;
             transform: translateY(-50%);
             width: 16px;
@@ -1527,6 +1526,20 @@ transition: all 0.3s ease;
             border-radius: 50%;
             transition: .3s;
         }
+
+        .first-footer .single-widget .footer-address li::before {
+            position: absolute;
+            content: "";
+            left: -17%;
+            top: 40%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50%;
+            transition: .3s;
+        }
+
 
         .single-widget .footer-address li:hover::before{
             background: var(--c-secondary-one);

@@ -3463,7 +3463,7 @@ img {
 }
 
 .blog-standard-section .blog-style .blog-content{
-       background: #eeeeee57;   
+       background: #eeeeee57; 
 }
 
 .blog-standard .blog-style:hover .blog-content{
@@ -3492,6 +3492,7 @@ img {
     padding: 10px 24px;
     color: var(--bg-white);
     margin-left: -2px;
+    margin-top: 39px;
 }
 
 .blog-standard-section .blog-style:hover .blog-content .eg-btn{

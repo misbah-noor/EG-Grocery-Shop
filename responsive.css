@@ -518,6 +518,7 @@
          padding: 0 10px;
      } 
 }
+
 @media screen and (max-width:395px) {
     .footer-section .footer-content{
         padding: 0;
@@ -756,7 +757,6 @@
     .product-summary .delete-btn{
         right: 10px;
         transform: translateY(90%);
-        /* left: 2%; */
         position: absolute;
         top: 43px;
     }
